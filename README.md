@@ -7,6 +7,8 @@ And, this software that coded by prprhyt is released under the MIT License, see 
 
 # color_detection
 指定したJPEGファイルに対してHSV値で指定した範囲の色を検出しマーキングし割合を算出するクラス
+forIntelEdisonブランチでは競技会当日に使用したソースファイルを載せています。  
+(一部ライセンス関する部分が追加してあります。)
 
 #その他
 2016/01/09に東海大学湘南キャンパスで行われたIntel Edison Competition 2015 においてペットボトルロケットでのミッションのために作成したものです。  
