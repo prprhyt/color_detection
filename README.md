@@ -42,4 +42,4 @@ viエディタで保存して終了するにはescキーを押して`:wq`を実�
 `opkg install libjpeg-dev libv4l-dev`  
 `opkg install fswebcam`  
 `opkg list | grep fswebcam`  
-環境設定は以上になります。お疲れ様でした。
+環境構築は以上になります。お疲れ様でした。
