@@ -1,4 +1,7 @@
 /*Formula_from_http://hooktail.org/computer/index.php?RGB%A4%AB%A4%E9HSV%A4%D8%A4%CE%CA%D1%B4%B9%A4%C8%C9%FC%B8%B5*/
+/*this software is based in part on the work of the Independent JPEG Group
+  このソフトウェアはthe Independent JPEG Groupのlibjpegを使用しています*/
+/*this software that coded by prprhyt is released under the MIT License, see LICENSE.*/
 
 #pragma once
 #ifndef JPEG_COLOR_DETECTION_HPP
