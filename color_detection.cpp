@@ -3,6 +3,7 @@
 
 /*this software is based in part on the work of the Independent JPEG Group
   このソフトウェアはthe Independent JPEG Groupのlibjpegを使用しています*/
+/*this software that coded by prprhyt is released under the MIT License, see LICENSE.*/
 
 #include"color_detection.hpp"
 
