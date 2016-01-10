@@ -10,6 +10,10 @@ And, this software that coded by prprhyt is released under the MIT License, see 
 masterブランチではバグの修正や機能の追加、整備を行います。  
 本番時に使用したソースファイルは*forIntelEdison*ブランチに置いてあります。
 
+#コンパイル
+libjpegとgccがインストールされた環境でソースファイルのあるディレクトリまで移動し、以下のコマンドを実行  
+`gcc -lstdc++ -ljpeg main.cpp color_detection.cpp`
+
 #その他
 2016/01/09に東海大学湘南キャンパスで行われたIntel Edison Competition 2015 においてペットボトルロケットでのミッションのために作成したものです。  
 本番ではペットボトルロケットにIntel EdisonとWebカメラを載せ、撮影した画像から緑地の割合を算出するミッションを無事遂行することができました。  
