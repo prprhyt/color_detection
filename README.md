@@ -19,7 +19,7 @@ forIntelEdisonブランチでは競技会当日に使用したソースファイ
 
 #Intel Edisonでの環境構築
 本ソフトウェアは9V電源(本番時は006P型9V電池)使用時のIntel Edison Kit for Arduino(とYocto Linux ver2.1)で動作確認済みです。  
-最新版のYocto Linux(2016/09/09時点ではver2.1)であれば標準でUSBタイプのWebカメラを認識します。  
+最新版のYocto Linux(2016/01/09時点ではver2.1)であれば標準でUSBタイプのWebカメラを認識します。  
 `lsusb`で確認し認識しない場合はまずOSバージョンを確認し、それでも解決に至らない場合、電圧不足を疑ってみてください。  
 
 以下に本ソフトウェアを利用するにあたって必要なlibjpegとfswebcamのインストール手順をまとめておきます。  
