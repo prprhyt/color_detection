@@ -183,7 +183,7 @@ float find_color_mass::find_hsv_mass(hsv_cls bottom_hsv,hsv_cls top_hsv,hsv_cls 
         printf("zero return\n");
         return 0.0;
     }
-    return (float)mass_counter/(float)(img_.height*img_.width);
+    return static_cast<float>(mass_counter)/static_cast<float>(img_.height*img_.width);
 }
 
 void find_color_mass::convert_hsv_to_rgb(){
@@ -310,7 +310,7 @@ float find_color_mass::equilibrium_filter(){
         return 0.0;
     }
     
-    return (float)mass_counter/(float)(img_.height*img_.width);
+    return static_cast<float>(mass_counter)/static_cast<float>(img_.height*img_.width);
 }
 
 void find_color_mass::write_jpeg_image(char file_name[]){
