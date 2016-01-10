@@ -10,12 +10,10 @@ And, this software that coded by prprhyt is released under the MIT License, see 
 forIntelEdisonブランチでは競技会当日に使用したソースファイルを載せています。  
 (一部ライセンス関する部分が追加してあります。)
 
-#その他
-2016/01/09に東海大学湘南キャンパスで行われたIntel Edison Competition 2015 においてペットボトルロケットでのミッションのために作成したものです。  
-本番ではペットボトルロケットにIntel EdisonとWebカメラを載せ、撮影した画像から緑地の割合を算出するミッションを無事遂行することができました。  
-チーム一丸となって取り組んだ甲斐がありました。  
-日付と競技会名の西暦が異なりますが、誤りでは**ない**  
-<sub>最優秀賞貰ったよ!</sub>
+#コンパイル
+libjpegとfswebcamとgccがインストールされた環境でソースファイルのあるディレクトリまで移動し、以下のコマンドを実行  
+`gcc -lstdc++ -ljpeg main.cpp color_detection.cpp`  
+IntelEdisonでのjpeglibとfswebcamのインストールについては下記の**Intel Edisonでの環境構築**を参照してください。  
 
 #Intel Edisonでの環境構築
 本ソフトウェアは9V電源(本番時は006P型9V電池)使用時のIntel Edison Kit for Arduino(とYocto Linux ver2.1)で動作確認済みです。  
@@ -43,3 +41,10 @@ viエディタで保存して終了するにはescキーを押して`:wq`を実�
 `opkg install fswebcam`  
 `opkg list | grep fswebcam`  
 環境構築は以上になります。お疲れ様でした。
+
+#その他
+2016/01/09に東海大学湘南キャンパスで行われたIntel Edison Competition 2015 においてペットボトルロケットでのミッションのために作成したものです。  
+本番ではペットボトルロケットにIntel EdisonとWebカメラを載せ、撮影した画像から緑地の割合を算出するミッションを無事遂行することができました。  
+チーム一丸となって取り組んだ甲斐がありました。  
+日付と競技会名の西暦が異なりますが、誤りでは**ない**  
+<sub>最優秀賞貰ったよ!</sub>
