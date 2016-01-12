@@ -350,10 +350,12 @@ void find_color_mass::write_jpeg_image(char file_name[]){
 void find_color_mass::destroy_all(){
     for(int px_y=0;px_y<img_.height;px_y++){
         delete[] img_.hsv[px_y];
+        delete[] img_.r_hsv[px_y];
         delete[] origin_jpeg_img_[px_y];
         delete[] mask_jpeg_img_[px_y];
     }
     delete[] img_.hsv;
+    delete[] img_.r_hsv;
     delete[] origin_jpeg_img_;
     delete[] mask_jpeg_img_;
 }
