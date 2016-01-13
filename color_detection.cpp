@@ -6,6 +6,8 @@
 /*this software that coded by prprhyt is released under the MIT License, see LICENSE.*/
 
 #include"color_detection.hpp"
+const int FILTER_RANGE = 5; //均衡化フィルタのピクセル集計範囲の指定(対象ピクセルから縦横+-FILTER_RANGE)範囲(ex:1なら3*3になる)
+const int FILTER_THRESHOLD = (FILTER_RANGE*2+1)*(FILTER_RANGE*2+1)/2; //多数決の際に用いるしきい値
 
 int find_color_mass::read_jpeg_image(char file_name[]){
     
@@ -250,11 +252,11 @@ float find_color_mass::equilibrium_filter(){
         for(int px_x=0;px_x<img_.width;px_x++){
             
             int black_counter=0,white_counter=0;
-            for(int sub_px_y=px_y-1;sub_px_y<=px_y+1;sub_px_y++){
+            for(int sub_px_y=px_y-FILTER_RANGE;sub_px_y<=px_y+FILTER_RANGE;sub_px_y++){
                 if(sub_px_y<0||sub_px_y>=img_.height){
                     continue;
                 }
-                for(int sub_px_x=px_x-1;sub_px_x<=px_x+1;sub_px_x++){
+                for(int sub_px_x=px_x-FILTER_RANGE;sub_px_x<=px_x+FILTER_RANGE;sub_px_x++){
                     if(sub_px_x<0||sub_px_x>=img_.width){
                         continue;
                     }
@@ -279,11 +281,11 @@ float find_color_mass::equilibrium_filter(){
                             ++white_counter;
                         }
                     }
-                    if(black_counter>5||white_counter>5){
+                    if(black_counter>FILTER_THRESHOLD||white_counter>FILTER_THRESHOLD){
                         break;
                     }
                 }
-                if(black_counter>5||white_counter>5){
+                if(black_counter>FILTER_THRESHOLD||white_counter>FILTER_THRESHOLD){
                     break;
                 }
             }
